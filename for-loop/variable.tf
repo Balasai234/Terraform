@@ -44,3 +44,9 @@ variable "instances" {
     default = ["SQL","Node.js","Nginx","Roboshop"]
   
 }
+variable "zone_id" {
+  default = "Z032558618100M4EJX8X4"
+}
+variable "domain_name" {
+  default = "daws84s.site"
+}
