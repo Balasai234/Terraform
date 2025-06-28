@@ -40,3 +40,7 @@ variable "sg_tags" {
 variable "environment" {
       default = "prod"
 }
+variable "instances" {
+    default = ["SQL","Node.js","Nginx","Roboshop"]
+  
+}
