@@ -1,6 +1,7 @@
 resource "aws_instance" "roboshop" {
   ami           = var.ami_id
-  instance_type = var.instance_type
+ # instance_type = var.instance_type calling from the variable.tf files
+  instance_type = var.environment == "dev" ? "t3.micro":"t3.small" # Condition caluse syntax: condition ? true:false
   vpc_security_group_ids = [ aws_security_group.allow_alls.id ]
   tags = var.tags
   
